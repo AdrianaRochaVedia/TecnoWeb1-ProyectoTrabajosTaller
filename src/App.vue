@@ -1,11 +1,17 @@
-<script setup lang="ts">
-// import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  
+  <body>
+    <Navbar />
+
+    <main>
+      <RouterView />
+    </main>
+  </body>
 </template>
 
 <style scoped>
 
 </style>
+
+<script setup lang="ts">
+  import Navbar from './router/Navbar.vue'
+</script>
