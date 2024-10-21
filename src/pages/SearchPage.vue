@@ -1,3 +1,7 @@
+<script setup lang="ts">
+  import Card from '../components/Card.vue';
+</script>
+
 <template>
   <body>
     <section class="sidebar">
@@ -39,6 +43,18 @@
         <button type="submit" class="search-icon material-symbols-outlined">search</button>
         <input type="search" placeholder="Buscar..." class="search-input">
       </div>
+
+      <div class="cards">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </section>
   </body>
 </template>
@@ -48,6 +64,7 @@
     display: flex;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
   }
 
   .sidebar {
@@ -55,8 +72,8 @@
     color: #0868ac;
     display: flex;
     flex-direction: column;
-    margin-left: 15px;
-    width: 331px;
+    padding-left: 15px;
+    width: 316px;
   }
 
   .filters {
@@ -73,6 +90,7 @@
     background-origin: 28px;
     border-radius: 60px;
     display: flex;
+    margin-bottom: 10px;
     padding: var(--padding);
     transition: box-shadow 0.25s;
     width: max-content;
@@ -124,4 +142,22 @@
   .check:checked ~ label {
     color: #0868ac;
   }
+
+  .results {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 50px;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    overflow-y: scroll;
+    width: calc(100vw - 450px);
+  }
+
+  .cards::-webkit-scrollbar {
+    display: none;
+  } 
 </style>
