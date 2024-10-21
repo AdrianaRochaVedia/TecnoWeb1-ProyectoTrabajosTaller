@@ -5,7 +5,7 @@
       <h1>BIENVENIDOS AL REPOSITORIO DE PROYECTOS DE GRADO</h1>
       <form>
         <div class="search">
-          <span class="search-icon material-symbols-outlined">search</span>
+          <button type="submit" class="search-icon material-symbols-outlined">search</button>
           <input type="search" placeholder="Buscar..." class="search-input">
         </div>
       </input>
@@ -77,6 +77,11 @@
     color: aliceblue;
     font-size: 64px;
     text-align: center;
+  }
+
+  button {
+    border-color: transparent;
+    cursor: pointer;
   }
   
 </style>

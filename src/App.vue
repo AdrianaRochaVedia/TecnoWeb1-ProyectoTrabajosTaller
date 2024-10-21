@@ -5,6 +5,8 @@
     <main>
       <RouterView />
     </main>
+
+    <CustomFooter />
   </body>
 </template>
 
@@ -13,5 +15,6 @@
 </style>
 
 <script setup lang="ts">
-  import Navbar from './router/Navbar.vue'
+  import Navbar from './components/Navbar.vue'
+  import CustomFooter from './components/CustomFooter.vue'
 </script>

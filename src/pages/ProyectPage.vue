@@ -30,16 +30,23 @@
           <input type="text" required spellcheck="false"/>
           
           <label>MODALIDAD DE TITULACIÓN</label>
-          <input type="text" required spellcheck="false"/>
+          <select name="modalidad" id="modalidad">
+            <option value="tesis">TESIS</option>
+            <option value="proyecto-grado">PROYECTO DE GRADO</option>
+            <option value="trabajo-dirigido">TRABAJO DIRIGIDO</option>
+            <option value="excelencia">GRADUACIÓN POR EXCELENCIA</option>
+            <option value="diplomado">GRADUACIÓN POR DIPLOMADO</option>
+            <option value="ptae">PTAE</option>
+          </select>
           
           <label>FECHA DE DEFENSA</label>
-          <input type="text" required spellcheck="false"/>
+          <input type="date" required spellcheck="false"/>
         </section>
       </div>
 
       <div class="buttons-section">
-        <button>GUARDAR</button>
-        <button>IMPORTAR EXCEL</button>
+        <button class="save">GUARDAR</button>
+        <button class="import">IMPORTAR EXCEL</button>
       </div>
     </form>
   </body>
@@ -96,15 +103,42 @@
     padding: 0 10px;
     width: 355px;
   }
+
+  select {
+    border-color: rgb(34, 33, 33);
+    border-radius: 8px;
+    font-size: 16px;
+    height: 46px;
+    padding: 0 10px;
+    width: 378px;
+  }
   
   .buttons-section {
     margin-top: 50px;
   }
 
   button {
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
     margin: 0 45px;
     height: 56px;
     width: 172px;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .save {
+    background-color: #0fc3e8;
+    border-color: #0fc3e8;
+    outline: none;
+  }
+
+  .import {
+    background-color: #36ef24;
+    border-color: #36ef24;
   }
 
 </style>

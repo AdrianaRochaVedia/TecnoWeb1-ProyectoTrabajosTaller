@@ -24,10 +24,10 @@
 <style scoped>
   .navbar {
     align-items: center;
+    background-color: #142a30;
     display: flex;
     justify-content: space-around;
     padding: 5px;
-    background-color: #142a30;
   }
   .img {
     height: 75px;
