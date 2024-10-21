@@ -1,7 +1,3 @@
-<script setup lang="ts">
-  import Card from '../components/Card.vue';
-</script>
-
 <template>
   <body>
     <section class="sidebar">
@@ -45,19 +41,16 @@
       </div>
 
       <div class="cards">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Card v-for="proyecto in proyectos" :proyecto="proyecto"/>
       </div>
     </section>
   </body>
 </template>
+
+<script setup lang="ts">
+  import Card from '../components/Card.vue';
+  import { proyectos } from '../data/proyectos.ts'
+</script>
 
 <style scoped>
   body {

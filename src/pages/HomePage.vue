@@ -5,7 +5,9 @@
       <h1>BIENVENIDOS AL REPOSITORIO DE PROYECTOS DE GRADO</h1>
       <form>
         <div class="search">
-          <button type="submit" class="search-icon material-symbols-outlined">search</button>
+          <RouterLink to="/search">
+            <button type="submit" class="search-icon material-symbols-outlined">search</button>
+          </RouterLink>
           <input type="search" placeholder="Buscar..." class="search-input">
         </div>
       </input>

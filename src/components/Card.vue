@@ -8,16 +8,23 @@
       <div class="category">
         <span>CATEGORÍA</span>
       </div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis commodo ante sapien, sagittis euismod risus interdum nec. Donec arcu lectus, bibendum sollicitudin fringilla eget, blandit a leo.</p>
+      <h2>{{ proyecto.titulo }}</h2>
     </div>
 
     <div class="details">
       <h3>Puntaje</h3>
-      <h3>Modalidad</h3>
+      <h3>{{ proyecto.modalidad }}</h3>
       <div class="photo"></div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { Proyecto } from '../data/proyectos';
+
+  defineProps<{ proyecto: Proyecto }>()
+
+</script>
 
 <style scoped>
 
@@ -54,7 +61,7 @@
     width: 107px;
   }
 
-  .information p {
+  .information h2 {
     text-align: center;
     padding: 0px 5px;
   }
