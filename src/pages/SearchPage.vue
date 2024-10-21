@@ -3,23 +3,35 @@
     <section class="sidebar">
       <h3>Buscar por: </h3>
       <div class="filters">
-        <label for="titulo">Titulo de Proyecto</label>
-        <input type="checkbox" name="titulo" id="titulo">
+        <div class="filter">
+          <input class="check" type="checkbox" name="titulo" id="titulo">
+          <label for="titulo">Titulo de Proyecto</label>
+        </div>
 
-        <label for="estudiante">Estudiante</label>
-        <input type="checkbox" name="estudiante" id="estudiante">
+        <div class="filter">
+          <input class="check" type="checkbox" name="estudiante" id="estudiante">
+          <label for="estudiante">Estudiante</label>
+        </div>
 
-        <label for="categoria">Categoría</label>
-        <input type="checkbox" name="categoria" id="categoria">
+        <div class="filter">
+          <input class="check" type="checkbox" name="categoria" id="categoria">
+          <label for="categoria">Categoría</label>
+        </div>
 
-        <label for="tutor">Tutor</label>
-        <input type="checkbox" name="tutor" id="tutor">
+        <div class="filter">
+          <input class="check" type="checkbox" name="tutor" id="tutor">
+          <label for="tutor">Tutor</label>
+        </div>
 
-        <label for="relator">Relator</label>
-        <input type="checkbox" name="relator" id="relator">
+        <div class="filter">
+          <input class="check" type="checkbox" name="relator" id="relator">
+          <label for="relator">Relator</label>
+        </div>
 
-        <label for="modalidad">Modalidad</label>
-        <input type="checkbox" name="modalidad" id="modalidad">
+        <div class="filter">
+          <input class="check" type="checkbox" name="modalidad" id="modalidad">
+          <label for="modalidad">Modalidad</label>
+        </div>
       </div>
     </section>
     <section class="results">
@@ -39,9 +51,18 @@
   }
 
   .sidebar {
+    background-color: #4eb4d331;
+    color: #0868ac;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
     width: 331px;
-    background-color: #b5d3bd;
-    opacity: 76%;
+  }
+
+  .filters {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
   }
 
   .search {
@@ -55,6 +76,10 @@
     padding: var(--padding);
     transition: box-shadow 0.25s;
     width: max-content;
+  }
+  
+  .filter {
+    margin-top: 15px;
   }
 
   .search:focus-within {
@@ -79,5 +104,24 @@
   button {
     border-color: transparent;
     cursor: pointer;
+  }
+
+  .check {
+    margin-right: 6px;
+    pointer-events: none;
+  }
+
+  label {
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .check:checked {
+    accent-color: #0868ac;
+  }
+
+  .check:checked ~ label {
+    color: #0868ac;
   }
 </style>
