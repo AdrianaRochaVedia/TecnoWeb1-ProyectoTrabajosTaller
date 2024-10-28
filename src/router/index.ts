@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/reportes',
       name: 'reportes',
       component: () => import('../pages/ReportPage.vue')
+    },
+    {
+      path: '/sesion',
+      name: 'sesion',
+      component: () => import('../pages/Sesion.vue')
     }
   ]
 })
